@@ -1,15 +1,8 @@
-# react-three-generator
+# React + Vite
 
-# goals
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-- Create a component system for procedurally generated elements for React Three Fiber
-- Textures can be used as inputs. where black = 0 and white = 1
-- Textures values are referenced to spawn objects given a specific min-max = object
-- Objects remove when not in view of the camera for speed
-- New objects spawn as the camera approaches
-- Objects to spawn can be libraries that generate objects procedurally from components
-- All of the above can be built in layers
+Currently, two official plugins are available:
 
-# references
-
-- highly inspired by: https://jeff-beene.com/portfolio/synthcity/
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
