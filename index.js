@@ -1,1 +1,1 @@
-export * from './src/index';
+export { Html } from './src/gridGen';
