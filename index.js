@@ -1,1 +1,1 @@
-export { Html } from './dist/main.js';
+export { GridGen } from './dist/index.js';
