@@ -1,6 +1,6 @@
 {
   "name": "react-three-generator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Procedural Generators for React Three Fiber",
   "main": "index.js",
   "scripts": {
