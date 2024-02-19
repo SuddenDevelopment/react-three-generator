@@ -1,3 +1,4 @@
+import React from 'react';
 import { generatePerlinNoise } from 'perlin-noise';
 import { Box, Wireframe } from '@react-three/drei';
 import { Vector3 } from 'three';
