@@ -1,12 +1,13 @@
 {
   "name": "react-three-generator",
-  "version": "1.1.5",
+  "version": "1.1.8",
   "description": "Procedural Generators for React Three Fiber",
-  "main": "./index.js",
-  "module": "./index.js",
+  "main": "./dist/main.js",
+  "module": "./dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "prepublish": "rm -rf ./dist && npm run build"
   },
   "repository": {
     "type": "git",
@@ -25,19 +26,20 @@
   },
   "homepage": "https://github.com/SuddenDevelopment/react-three-generator#readme",
   "dependencies": {
-    "@react-three/drei": "^9.99.0",
-    "@react-three/fiber": "^8.15.16",
-    "peer": "^1.0.2",
-    "perlin-noise": "^0.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "perlin-noise": "^0.0.1"
   },
   "devDependencies": {
+    "@react-three/drei": "^9.99.0",
+    "@react-three/fiber": "^8.15.16",
+    "babel-preset-es2015": "^6.24.1",
+    "peer": "^1.0.2",
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-react": "^7.23.3",
     "babel-loader": "^9.1.3",
     "webpack": "^5.90.3",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
