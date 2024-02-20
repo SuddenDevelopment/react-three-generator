@@ -1,5 +1,7 @@
 # React Three Generator
 
+INPIRED BY: https://jeff-beene.com/portfolio/synthcity/
+
 ## Install
 
 ```bash npm install react-three-generator```
@@ -20,3 +22,8 @@
     );
 }
 ```
+
+## References
+
+- https://github.com/IceCreamYou/THREE.Terrain
+- 
