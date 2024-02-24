@@ -1,6 +1,6 @@
 {
   "name": "react-three-generator",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Procedural Generators for React Three Fiber",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -27,7 +27,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "core-js": "^3.36.0",
-    "perlin-noise": "^0.0.1"
+    "fastnoise-lite": "^1.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.9",

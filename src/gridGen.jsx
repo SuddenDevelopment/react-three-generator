@@ -1,6 +1,5 @@
 import React from 'react';
-import { generatePerlinNoise } from 'perlin-noise';
-import { Wireframe } from '@react-three/drei';
+import FastNoiseLite from "fastnoise-lite";
 import { Vector3 } from 'three';
 import { Instances } from '@react-three/drei';
 
@@ -11,16 +10,17 @@ noiseMap={[
       ]}
       */
 export default function GridGen({ noiseMap }) {
-  const noiseData = generatePerlinNoise(100, 100);
+  let noise = new FastNoiseLite();
+  noise.SetNoiseType(FastNoiseLite.NoiseType.Perlin);
   const instancePositions = [];
   const instanceComponents = [];
 
   for (let i = 0; i < 100; i++) {
     for (let j = 0; j < 100; j++) {
-      const height = noiseData[i * 100 + j];
+      const noiseValue = noise.GetNoise(i*10, j*10);
       for (const range of noiseMap) {
-        if (height >= range.noiseMin && height <= range.noiseMax) {
-          instancePositions.push(new Vector3(i - 10, height * 10, j - 10));
+        if (noiseValue >= range.noiseMin && noiseValue <= range.noiseMax) {
+          instancePositions.push(new Vector3(i, noiseValue * 10, j ));
           instanceComponents.push(range.meshComponent);
           break;
         }
